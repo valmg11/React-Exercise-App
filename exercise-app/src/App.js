@@ -1,22 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from 'react'
+import RepetitionExercise from "./components/RepetitionExercise"
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(()=> {
+    // console.log("button clicked "+ count+ " times");
+  }, []);
+  
+  // const 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>Increase</button>
+        {/* change below? */}
+        <button onClick={() => setCount(count*0)}>Reset</button>
       </header>
     </div>
   );
