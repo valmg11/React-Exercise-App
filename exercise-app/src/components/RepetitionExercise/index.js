@@ -1,5 +1,6 @@
 //Repetition
 import {useState, useEffect} from 'react'
+import DurationExercise from "../DurationExercise"
 
 
 function RepetitionExercise() {
@@ -15,6 +16,7 @@ function RepetitionExercise() {
         <button onClick={() => setCount(count + 1)}>Increase</button>
         {/* change below setCount? */}
         <button onClick={() => setCount(count*0)}>Reset</button>
+        <DurationExercise></DurationExercise>
         </header>
     </div>
 
