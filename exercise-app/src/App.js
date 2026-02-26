@@ -7,7 +7,7 @@ import DurationExercise from "./components/DurationExercise"
 
 
 function App() {
-  let name = ["Repetition", "Duration"]
+  let names = ["Repetition", "Duration"];
 
   const [selectedButton, setSelectedButton] = useState(null);
 
@@ -26,9 +26,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>{selectedButton}</div>
-        <div class="buttons">
-          <button onClick={() => handleClick(<RepetitionExercise/>)}>Repetition Exercise</button>
-          <button onClick={() => handleClick(<DurationExercise/>)}>Duration Exercise</button>
+        <div className="buttons">
+          <button onClick={() => handleClick(<RepetitionExercise name={names}/>)}>Repetition Exercise</button>
+          <button onClick={() => handleClick(<DurationExercise name={names}/>)}>Duration Exercise</button>
         </div>
       </header>
     </div>

@@ -13,10 +13,10 @@ function RepetitionExercise(props) {
     return (
     <div className="App">
         <header className="App-header">
-        {/* <p>{props.name[0]} Exercise</p> */}
-        <p>Repetition Exercise</p>
+        <p>{props.name[0]} Exercise</p>
+        {/* <p>Repetition Exercise</p> */}
         <p>{count}</p>
-            <div class="buttons">
+            <div className="buttons">
                 <button onClick={() => setCount(count + 1)}>Increase</button>
                 {/* change below setCount? */}
                 <button onClick={() => setCount(count*0)}>Reset</button>
