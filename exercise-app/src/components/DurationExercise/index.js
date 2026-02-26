@@ -1,10 +1,11 @@
+//Valentina Gandolfo
 // Duration
 import {useState, useEffect, useCallback} from 'react'
 
 import React from "react";
 
 
-function DurationExercise() {
+function DurationExercise(props) {
     let [timer, setTimer] = useState(0)
     let [curTime, setCurTime] = useState(0)
     let [time, setTime] = useState(0)
@@ -38,7 +39,8 @@ function DurationExercise() {
 
     return (
     <div className="App">
-        <header className="App">
+        <header className="App-header">
+            {/* <p>{props.name[1]} Exercise</p> */}
             <p>Duration Exercise</p>
         <p>{running ? (Date.now()-curTime)/1000 : time/1000}</p>
         <button onClick={click}>{running ? "Stop" : "Start"}</button>

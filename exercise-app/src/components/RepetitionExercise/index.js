@@ -1,9 +1,11 @@
+//Valentina Gandolfo
 //Repetition
+
 import {useState, useEffect} from 'react'
-import DurationExercise from "../DurationExercise"
+// import DurationExercise from "../DurationExercise"
 
 
-function RepetitionExercise() {
+function RepetitionExercise(props) {
     const [count, setCount] = useState(0);
     useEffect(()=> {
         // console.log("button clicked "+ count+ " times");
@@ -11,12 +13,15 @@ function RepetitionExercise() {
     return (
     <div className="App">
         <header className="App-header">
+        {/* <p>{props.name[0]} Exercise</p> */}
         <p>Repetition Exercise</p>
-        <span>{count}</span>
-        <button onClick={() => setCount(count + 1)}>Increase</button>
-        {/* change below setCount? */}
-        <button onClick={() => setCount(count*0)}>Reset</button>
-        <DurationExercise></DurationExercise>
+        <p>{count}</p>
+            <div class="buttons">
+                <button onClick={() => setCount(count + 1)}>Increase</button>
+                {/* change below setCount? */}
+                <button onClick={() => setCount(count*0)}>Reset</button>
+                {/* <DurationExercise name></DurationExercise> */}
+            </div>
         </header>
     </div>
 
