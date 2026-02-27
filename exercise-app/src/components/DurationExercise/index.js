@@ -2,8 +2,9 @@
 //reference used: https://youtu.be/jPo0mIcNZfM?si=Z1LD_Ah-0BGEcD9g
 
 // Duration
-import {useState, useEffect, useRef} from 'react'
 
+// useRef does not re-render. The values are persistant between renders, and it can store mutable values.
+import {useState, useEffect, useRef} from 'react'
 import React from "react";
 
 
@@ -63,17 +64,16 @@ function DurationExercise(props) {
         function start() {
             setIsRunning(true);
             startTimeRef.current = Date.now() - elapsedTime;
-            console.log("start")
         }
         
         // function stop() {
             //     setIsRunning(false);
             // }
 
+        //stops running and sets value to 0
         function reset() {
             setElapsedTime(0);
             setIsRunning(false);
-            console.log("stop")
         }
     
         function formatTime() {
@@ -97,7 +97,7 @@ function DurationExercise(props) {
     return (
     <div className="App">
         <header className="App-header">
-            <p>{props.name[1]} Exercise</p>
+            <p>{props.name[1]}</p>
             {/* <p>Duration Exercise</p> */}
         {/* <p>{running ? (Date.now()-curTime)/1000 : time/1000}</p> */}
         {/* <button onClick={click}>{running ? "Reset" : "Start"}</button> */}
@@ -107,7 +107,7 @@ function DurationExercise(props) {
             {/* <button onClick={stop}>Stop</button> */}
 
             {/* reset/stop button */}
-            <button onClick={reset}>Stop</button>
+            <button onClick={reset}>Reset</button>
         </div>
         </header>
     </div>
